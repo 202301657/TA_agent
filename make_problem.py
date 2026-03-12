@@ -3,7 +3,7 @@ from google.genai import types
 import json
 
 # 1. API 키 설정 (발급받은 키를 입력하세요)
-API_KEY = "AIzaSyBboIIXbUigrDd7nzNotnN-MBxIq8IuDSs" 
+API_KEY = "AIzaSyAI7VnOW3DkX38qNmS-rETDA7SAtcNIJek" 
 
 # 새로운 Client 객체 생성 방식
 client = genai.Client(api_key=API_KEY)
