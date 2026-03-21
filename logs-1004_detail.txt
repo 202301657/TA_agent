@@ -1,0 +1,1740 @@
+대회 번호: 1004
+템플릿 검사 문제: [1090, 1091]
+추가 변수 금지 문제: [1091]
+동적할당 문제: []
+======================================================================
+
+[1] 템플릿 외부 수정 검사
+----------------------------------------------------------------------
+이상 없음
+
+[2] 추가 변수 선언 검사
+----------------------------------------------------------------------
+DS202500062 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * errmsg | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[660](error)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202302920 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 13개
+    * i | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack) / CompoundStmt[0] / ForStmt[0] / DeclStmt[0]
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301638 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * res | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * s | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * s | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * s | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * t | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * t | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * t | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * t | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * t | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+
+DS202301637 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301655 / 1091 / Wrong Answer
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * i | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack) / CompoundStmt[0] / ForStmt[0] / DeclStmt[0]
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301637 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301655 / 1091 / Wrong Answer
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301655 / 1091 / Wrong Answer
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301655 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * value | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / DeclStmt[0]
+    * value | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push) / CompoundStmt[0] / DeclStmt[0]
+
+DS202301650 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202336 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202301637 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * value | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / DeclStmt[0]
+    * value | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push) / CompoundStmt[0] / DeclStmt[0]
+
+DS202301654 / 1091 / Wrong Answer
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301654 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501527 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * array | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * array | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * array | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * max | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * max | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202336 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202202336 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202300135 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * s | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * t | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501524 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501524 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501529 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[658](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501524 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202200867 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:empty | TranslationUnitDecl[0] / FunctionDecl[658](empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501524 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501529 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[658](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501529 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[658](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202336 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202501524 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301871 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * p | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack) / CompoundStmt[0] / ForStmt[0] / DeclStmt[0]
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501524 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501524 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301638 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * res | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * s | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * s | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * s | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * t | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * t | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * t | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * t | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * t | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+
+DS202501529 / 1091 / Wrong Answer
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[658](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301653 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * res | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501529 / 1091 / Wrong Answer
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[658](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301651 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * st | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * st | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * t | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * t | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * t | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * t | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * t | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+
+DS202501509 / 1091 / Wrong Answer
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * a | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501509 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * a | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501508 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * N | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * _stack | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * _top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * data | int[10001] | global | TranslationUnitDecl[0]
+    * em_top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * fu_top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * pop_stack | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * pop_top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * push_input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * push_n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * push_stack | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * push_top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * t | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+
+DS202501524 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301650 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202301650 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 15개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202336 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202301647 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * c | int | global | TranslationUnitDecl[0]
+    * i | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * l | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * l | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * s | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * s | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * s | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * t | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * t | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * t | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * t | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * t | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+
+DS202501498 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202501498 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202336 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202501529 / 1091 / ACCEPTED
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * item | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[658](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202403024 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 16개
+    * data | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * data | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * data | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+
+DS202202336 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202202336 / 1091 / 출력제한 초과
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[0]
+    * str | char * | FunctionDecl:error | TranslationUnitDecl[0] / FunctionDecl[658](error)
+    * tmp | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push) / CompoundStmt[0] / IfStmt[0] / CompoundStmt[1] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[664](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[663](print_stack)
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[659](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[660](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[662](pop)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[661](push)
+
+DS202501498 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * value | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / DeclStmt[0]
+    * value | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push) / CompoundStmt[0] / DeclStmt[0]
+
+DS202501498 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * value | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / DeclStmt[0]
+    * value | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push) / CompoundStmt[0] / DeclStmt[0]
+
+DS202501498 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 14개
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * input | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * value | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / DeclStmt[0]
+    * value | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push) / CompoundStmt[0] / DeclStmt[0]
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * value | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / DeclStmt[0]
+    * value | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push) / CompoundStmt[0] / DeclStmt[0]
+
+DS202202323 / 1091 / Runtime Error
+  - AST 상태: 정상
+  - 추가 변수: 17개
+    * e | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * input | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[3]
+    * n | int | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * n | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[2]
+    * n | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * stack | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * stack | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * stack | int[10001] | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[0]
+    * top | int | FunctionDecl:main | TranslationUnitDecl[0] / FunctionDecl[663](main) / CompoundStmt[0] / DeclStmt[1]
+    * top | int * | FunctionDecl:is_empty | TranslationUnitDecl[0] / FunctionDecl[658](is_empty)
+    * top | int * | FunctionDecl:is_full | TranslationUnitDecl[0] / FunctionDecl[659](is_full)
+    * top | int * | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop)
+    * top | int * | FunctionDecl:print_stack | TranslationUnitDecl[0] / FunctionDecl[662](print_stack)
+    * top | int * | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push)
+    * value | int | FunctionDecl:pop | TranslationUnitDecl[0] / FunctionDecl[661](pop) / CompoundStmt[0] / DeclStmt[0]
+    * value | int | FunctionDecl:push | TranslationUnitDecl[0] / FunctionDecl[660](push) / CompoundStmt[0] / DeclStmt[0]
+
+[4] 의심 복사/붙여넣기 (템플릿 원본 제외)
+----------------------------------------------------------------------
+User: DS202101670
+  - 2026-03-17 13:15:20 / 문제 A
+    data: exit(0);
+    additional: #include <stdio.h> #include <stdlib.h>  #define MAX_SIZE 10001   // 이 위로 수정 금지 int is_empty() {      }  int is_full() {      }  void pop(int stack, int top) {     if(is_full()) {              } else {         top--;     } }  void push() {      }  void print_stack() {      }  // 이 아래로 수정 금지    int main() {      int stack[MAX_SIZE];     int top = 0;     int n;     int input;      scanf("%d", &n);      while (1) {         scanf("%d", &input);          if (input == 0) {             print_stack(stack, top);             break;          }         else if (input == -1) {             pop(stack, &top);         }         else if (input > 0){             push(stack, &top, n, input);         }     }      return 0; }
+  - 2026-03-17 13:15:39 / 문제 A
+    data: underflow
+    additional: #include <stdio.h> #include <stdlib.h>  #define MAX_SIZE 10001   // 이 위로 수정 금지 int is_empty() {      }  int is_full() {      }  void pop(int stack, int top) {     if(is_full()) {         printf("",);         exit(0);     } else {         top--;     } }  void push() {      }  void print_stack() {      }  // 이 아래로 수정 금지    int main() {      int stack[MAX_SIZE];     int top = 0;     int n;     int input;      scanf("%d", &n);      while (1) {         scanf("%d", &input);          if (input == 0) {             print_stack(stack, top);             break;          }         else if (input == -1) {             pop(stack, &top);         }         else if (input > 0){             push(stack, &top, n, input);         }     }      return 0; }
+
+User: DS202200867
+  - 2026-03-17 13:10:22 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:40:02 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:46:56 / 문제 B
+    data: 
+  - 2026-03-17 13:49:15 / 문제 B
+    data: 
+
+User: DS202201645
+  - 2026-03-17 13:10:48 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:28:47 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 14:12:05 / 문제 D
+    data: int main() {
+  - 2026-03-17 14:23:17 / 문제 D
+    data: getchar(); // 버퍼에 남은 개행 문자( ) 제거
+  - 2026-03-17 14:36:29 / 문제 D
+    data: fgets(expr, sizeof(expr), stdin); // 한 줄 입력받기
+    additional: #include <stdio.h> #include <stdlib.h>   #define MAX_SIZE 1000 int top; int data[MAX_SIZE];  void init_stack(){      top = -1; }  int is_empty(){     if( top == -1) return 1;     else return 0; }  int is_full(){     if ( top == (MAX_SIZE-1)) return 1;     else return 0; }  void push(Element e){     if(is_full()){         printf("overfull");     }     else data[++top] = e; }  int pop(){     if(is_empty())         printf("underflow");     else return data[top--]; }    int change(char expr[]){     init_stack();     int i = 0;     while(expr[i] != '\0'){         char c = expr[i++];         if(c >= '0' && c <= '9'){            double num = double(c) - '0';             push(num);         }         else if( c == '+' ||c == '-' || c == '*' || c == '/' ){             double val2 = pop();             double val1 = pop();             swich(c){                 case '+': push(val1 + val2); break;                 case '-': push(val1 - val2); break;                 case '*': push(val1 * val2); break;                 case '/': push(val1 / val2); break;             }         }     } return pop(); }   int main(){     init_stack();     char str[101];     gets_s(str,101);     int result = change(str);     printf("%d\n", result);      return 0; }   
+
+User: DS202201665
+  - 2026-03-17 13:10:38 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:10:48 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:48:02 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202202323
+  - 2026-03-17 13:10:24 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202202336
+  - 2026-03-17 13:10:05 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:44:07 / 문제 B
+    data: 
+  - 2026-03-17 14:36:51 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 14:36:59 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202300135
+  - 2026-03-17 13:10:53 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:34:28 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 14:21:00 / 문제 D
+    data: 3 4 + 5 6 * +
+    additional: #include <stdio.h>  #define MAX_SIZE 100 typedef int Element; Element data[MAX_SIZE]; int top;  void init_stack() {     top = -1; } int is_empty() {     return (top == -1); } void push(Element e) {     data[++top] = e; } Element pop() {     return data[top--]; }  int main() {     char ph[101] = {""}     return 0; }
+
+User: DS202301635
+  - 2026-03-17 13:11:15 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:41:24 / 문제 B
+    data: 
+
+User: DS202301636
+  - 2026-03-17 13:10:16 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:55:26 / 문제 B
+    data: 
+
+User: DS202301637
+  - 2026-03-17 13:10:14 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:26:32 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:26:59 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:29:33 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:30:04 / 문제 B
+    data: #include <stdio.h>
+
+User: DS202301638
+  - 2026-03-17 13:10:15 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:20:59 / 문제 B
+    data: #include <stdio.h>
+
+User: DS202301640
+  - 2026-03-17 13:10:16 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:11:51 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:12:13 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:22:11 / 문제 B
+    data: 
+  - 2026-03-17 13:22:17 / 문제 B
+    data: 
+  - 2026-03-17 13:34:09 / 문제 D
+    data: #include <stdio.h>
+  - 2026-03-17 13:54:00 / 문제 C
+    data: #include <stdio.h>
+
+User: DS202301642
+  - 2026-03-17 13:10:51 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:17:33 / 문제 C
+    data: 
+
+User: DS202301643
+  - 2026-03-17 13:10:25 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:32:03 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:49:53 / 문제 B
+    data: printf("YES ");
+  - 2026-03-17 13:50:08 / 문제 B
+    data: printf("NO ");
+    additional: #include <stdio.h>
+
+User: DS202301647
+  - 2026-03-17 13:11:12 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202301650
+  - 2026-03-17 13:10:11 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:27:09 / 문제 B
+    data: 
+
+User: DS202301651
+  - 2026-03-17 13:10:19 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 14:09:17 / 문제 B
+    data: int check_vps(char expr[])
+    additional: #include <stdio.h>
+
+User: DS202301653
+  - 2026-03-17 13:10:18 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:14:52 / 문제 A
+    data: overflow
+    additional: #include <stdio.h>
+  - 2026-03-17 13:16:18 / 문제 A
+    data: underflow
+    additional: #include <stdio.h>
+  - 2026-03-17 14:03:32 / 문제 D
+    data: fgets(expr, sizeof(expr), stdin); // 한 줄 입력받기
+    additional: #include <stdio.h> #include <stdlib.h>  #define MAX_SIZE 105  double stack[MAX_SIZE]; int top;  void init_stack() {     top = -1; }  int is_empty(){     if (top == -1) return 1;     else return 0; } void push(char c){     stack[++top]=c; } double pop(){     return stack[top--]; } void print_stack(char str[]){     init_stack();     int i=0;     while(str[i]!='\0'){         char c=str[i++];         if(c=='+'||c=='-'||c=='*'||c=='/'){             double num2 = pop();             double num1 = pop();             if(c=='+') push(num1+num2);             else if(c=='-') push(num1-num2);             else if(c=='*') push(num1*num2);             else if(c=='/') push(num1/num2);         }         else if (c>='0'&&c<='9'){             push((double)c-'0');         }     }     printf("%.f",stack[0]); } int main(){     char S[105];     scanf(" %[^\n]",S);          print_stack(S);     return 0; }
+
+User: DS202301654
+  - 2026-03-17 13:10:12 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:10:17 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:10:31 / 문제 A
+    data: is_empty
+  - 2026-03-17 13:31:46 / 문제 B
+    data: 
+  - 2026-03-17 13:32:32 / 문제 B
+    data: push, pop, check_vps
+  - 2026-03-17 13:35:17 / 문제 B
+    data: int is_empty(int* top){
+  - 2026-03-17 13:41:55 / 문제 C
+    data: 
+  - 2026-03-17 14:03:07 / 문제 D
+    data: #include <stdio.h>
+  - 2026-03-17 14:06:41 / 문제 D
+    data: expr[i] == '+' || expr[i] == '-' || expr[i] == '/' || expr[i] == '*'
+    additional: #include <stdio.h>
+  - 2026-03-17 14:15:48 / 문제 D
+    data: fgets(expr, sizeof(expr), stdin); // 한 줄 입력받기
+    additional: #include <stdio.h>
+
+User: DS202301655
+  - 2026-03-17 13:10:13 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:26:17 / 문제 B
+    data: 
+
+User: DS202301663
+  - 2026-03-17 13:10:29 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:20:01 / 문제 A
+    data: overflow
+    additional: #include <stdio.h>
+  - 2026-03-17 13:39:13 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:57:41 / 문제 D
+    data: getchar(); // 버퍼에 남은 개행 문자( ) 제거
+
+User: DS202301674
+  - 2026-03-17 13:11:21 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:45:58 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 14:20:05 / 문제 B
+    data: 
+  - 2026-03-17 14:33:50 / 문제 B
+    data: 개수
+  - 2026-03-17 14:34:28 / 문제 B
+    data: 테스트 케이스의 개수
+  - 2026-03-17 14:36:40 / 문제 B
+    data: 스택의 크기
+  - 2026-03-17 14:37:35 / 문제 B
+    data: 중위 표기식
+  - 2026-03-17 14:38:54 / 문제 B
+    data: 후위 표기식
+
+User: DS202301871
+  - 2026-03-17 13:10:11 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:43:15 / 문제 B
+    data: 
+  - 2026-03-17 13:43:26 / 문제 B
+    data: 
+  - 2026-03-17 14:14:43 / 문제 C
+    data: int main() {
+
+User: DS202302920
+  - 2026-03-17 13:10:12 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:19:59 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:38:09 / 문제 B
+    data: 
+
+User: DS202401660
+  - 2026-03-17 13:10:22 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:25:00 / 문제 B
+    data: 
+
+User: DS202403024
+  - 2026-03-17 13:10:36 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:10:44 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:24:02 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:26:11 / 문제 B
+    data: check_vps
+    additional: #include <stdio.h> #include <stdlib.h>  #define MAX_SIZE 105  char stack[MAX_SIZE]; int top;  void init_stack() {     top = -1; }  // 이 위로 수정 금지  void error(char str[]){     printf("%s",str);     exit(0); } void is_empty(){     if(top==-1){         return 1;     }     else         return 0; } void is_full(){     if(top==n-1){         return 1;     }     else         return 0; } void push(char e){     if(is_full()){         error("overflow\n");     }     else         data[++top]=e; } int pop(){     if(is_empty()){         error("underflow\n");     }     else         return data[top--]; }    // 이 아래로 수정 금지  int main() {      int T;     char expr[MAX_SIZE];     scanf("%d", &T);     getchar(); //  버퍼에 남은 개행 문자(\n) 제거      for (int i = 0; i < T; i++) {         init_stack();         fgets(expr, sizeof(expr), stdin); // 한 줄 입력받기         int result = check_vps(expr);         if (result == 0)             printf("YES\n");         else             printf("NO\n");     }      return 0; }
+  - 2026-03-17 14:01:26 / 문제 D
+    data: 3 4 + 5 6 * +
+    additional: #include <stdio.h> #include <stdlib.h> #define MAX_SIZE 100 int top; int data[MAX_SIZE];  void init_stack(){     top=-1; } void error(char str[]){     printf("%s",str);     exit(0); } int is_empty(){     if(top==-1){         return 1;     }     else         return 0; } int is_full(){     if(top==MAX_SIZE-1){         return 1;     }     else         return 0; } void push(char e){     if(is_full()){         error("overflow\n");     }     else         data[++top]=e; } int pop(){     if(is_empty()){         error("underflow\n");     }     else         return data[top--]; } void Val_v(char expr[]){     int i;     init_stack();     while(expr[i]!='\0'){         int c=expr[i++];         if(c>='0'||c<=9){             int num=(int)c-'0';             push(num);         }         else if(c=='+'||c=='-'||c=='*'||c=='/'){             int val2=pop();             int val1=pop();             switch(c){                 case '+':push(val1+val2); break;                 case '-':push(val1-val2); break;                 case '*':push(val1*val2); break;                 case '/':push(val1/val2); break;             }         }     } }  int main(){     char number[MAX_SIZE]="";               printf("%d",Val_v(number)); }
+  - 2026-03-17 14:04:08 / 문제 D
+    data: 3 4 + 5 6 * +
+    additional: #include <stdio.h> #include <stdlib.h> #define MAX_SIZE 100 int top; int data[MAX_SIZE];  void init_stack(){     top=-1; } void error(char str[]){     printf("%s",str);     exit(0); } int is_empty(){     if(top==-1){         return 1;     }     else         return 0; } int is_full(){     if(top==MAX_SIZE-1){         return 1;     }     else         return 0; } void push(char e){     if(is_full()){         error("overflow\n");     }     else         data[++top]=e; } int pop(){     if(is_empty()){         error("underflow\n");     }     else         return data[top--]; } void Val_v(char expr[]){     int i;     init_stack();     while(expr[i]!='\0'){         int c=expr[i++];         if(c>='0'||c<=9){             int num=(int)c-'0';             push(num);         }         else if(c=='+'||c=='-'||c=='*'||c=='/'){             int val2=pop();             int val1=pop();             switch(c){                 case '+':push(val1+val2); break;                 case '-':push(val1-val2); break;                 case '*':push(val1*val2); break;                 case '/':push(val1/val2); break;             }         }     } }  int main(){     char number[]="3 4 + 5 6 * +";               printf("%d",); }
+  - 2026-03-17 14:08:59 / 문제 D
+    data: fgets(expr, sizeof(expr), stdin);
+    additional: #include <stdio.h> #include <stdlib.h> #define MAX_SIZE 100 int top; int data[MAX_SIZE];  void init_stack(){     top=-1; } void error(char str[]){     printf("%s",str);     exit(0); } int is_empty(){     if(top==-1){         return 1;     }     else         return 0; } int is_full(){     if(top==MAX_SIZE-1){         return 1;     }     else         return 0; } void push(char e){     if(is_full()){         error("overflow\n");     }     else         data[++top]=e; } int pop(){     if(is_empty()){         error("underflow\n");     }     else         return data[top--]; } void Val_v(char expr[]){     int i;     init_stack();     while(expr[i]!='\0'){         int c=expr[i++];         if(c>='0'||c<=9){             int num=(int)c-'0';             push(num);         }         else if(c=='+'||c=='-'||c=='*'||c=='/'){             int val2=pop();             int val1=pop();             switch(c){                 case '+':push(val1+val2); break;                 case '-':push(val1-val2); break;                 case '*':push(val1*val2); break;                 case '/':push(val1/val2); break;             }         }     } }  int main(){     char number[MAX_SIZE];          Val_v(number);          printf("%d",pop()); }
+
+User: DS202500062
+  - 2026-03-17 13:15:54 / 문제 B
+    data: #include <stdio.h> #include <stdlib.h> #define MAX_SIZE 105 char stack[MAX_SIZE]; int top; void init_stack() { top = -1; } // 이 위로 수정 금지 // 이 아래로 수정 금지 int main() { int T; char expr[MAX_SIZE]; scanf("%d", &T); <span style="color:#1F1F1F;font-family:"font-size:16px;font-variant-ligatures:none;white-space:pre-wrap;background-color:#FFFFFF;">getchar(); // 버퍼에 남은 개행 문자( ) 제거 </span> for (int i = 0; i < T; i++) { init_stack(); fgets(expr, sizeof(expr), stdin); //<span class="hljs-comment"> 한 줄 입력받기</span> int result = check_vps(expr); if (result == 0) printf("YES "); else printf("NO "); } return 0; }
+  - 2026-03-17 13:15:58 / 문제 B
+    data: #include <stdio.h> #include <stdlib.h> #define MAX_SIZE 105 char stack[MAX_SIZE]; int top; void init_stack() { top = -1; } // 이 위로 수정 금지 // 이 아래로 수정 금지 int main() { int T; char expr[MAX_SIZE]; scanf("%d", &T); <span style="color:#1F1F1F;font-family:"font-size:16px;font-variant-ligatures:none;white-space:pre-wrap;background-color:#FFFFFF;">getchar(); // 버퍼에 남은 개행 문자( ) 제거 </span> for (int i = 0; i < T; i++) { init_stack(); fgets(expr, sizeof(expr), stdin); //<span class="hljs-comment"> 한 줄 입력받기</span> int result = check_vps(expr); if (result == 0) printf("YES "); else printf("NO "); } return 0; }
+
+User: DS202501493
+  - 2026-03-17 13:10:18 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202501498
+  - 2026-03-17 13:10:17 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:56:42 / 문제 B
+    data: 
+  - 2026-03-17 14:15:44 / 문제 B
+    data: 
+
+User: DS202501503
+  - 2026-03-17 13:10:26 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 14:21:19 / 문제 B
+    data: 
+  - 2026-03-17 14:22:56 / 문제 B
+    data: int check_vps(char expr[])
+
+User: DS202501505
+  - 2026-03-17 13:10:51 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:21:44 / 문제 B
+    data: 
+  - 2026-03-17 13:58:10 / 문제 B
+    data: 
+
+User: DS202501506
+  - 2026-03-17 13:10:21 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:18:21 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:18:30 / 문제 B
+    data: #include <stdio.h>
+
+User: DS202501508
+  - 2026-03-17 13:10:09 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:48:47 / 문제 B
+    data: 
+
+User: DS202501509
+  - 2026-03-17 13:10:35 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:43:42 / 문제 B
+    data: 
+
+User: DS202501512
+  - 2026-03-17 13:10:21 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202501513
+  - 2026-03-17 13:10:40 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 14:01:27 / 문제 B
+    data: 
+  - 2026-03-17 14:26:03 / 문제 B
+    data: 
+  - 2026-03-17 14:26:38 / 문제 B
+    data: 
+
+User: DS202501514
+  - 2026-03-17 13:10:51 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202501515
+  - 2026-03-17 13:10:17 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:10:32 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:11:22 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:18:29 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:26:23 / 문제 B
+    data: 
+  - 2026-03-17 13:27:41 / 문제 B
+    data: 
+  - 2026-03-17 13:37:30 / 문제 B
+    data: ( ( ) ) ( )
+
+User: DS202501519
+  - 2026-03-17 13:10:14 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:38:33 / 문제 B
+    data: 
+  - 2026-03-17 13:38:44 / 문제 B
+    data: 
+
+User: DS202501520
+  - 2026-03-17 13:10:51 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:44:41 / 문제 A
+    data: #include <stdio.h>
+
+User: DS202501522
+  - 2026-03-17 13:10:09 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:18:34 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:18:54 / 문제 B
+    data: #include <stdio.h>
+  - 2026-03-17 13:47:59 / 문제 B
+    data: 
+  - 2026-03-17 14:22:54 / 문제 B
+    data: 
+
+User: DS202501524
+  - 2026-03-17 13:10:19 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:16:06 / 문제 A
+    data: overflow
+    additional: #include <stdio.h>
+  - 2026-03-17 13:29:09 / 문제 A
+    data: exit(0);
+    additional: #include <stdio.h>
+  - 2026-03-17 13:29:18 / 문제 A
+    data: exit(0);
+    additional: #include <stdio.h>
+  - 2026-03-17 13:42:38 / 문제 B
+    data: 
+  - 2026-03-17 14:19:21 / 문제 A
+    data: underflow
+    additional: #include <stdio.h> #include <stdlib.h>  #define MAX_SIZE 10001   // 이 위로 수정 금지 int is_empty(int top){     if(top==0) return 1;     else return 0; } int is_full(int top, int n){     if(top==n) return 1;     else return 0; } void push(int stack[], int* top, int n, int input){     if(is_full(*top,n)) printf("overflow\n");     else {         stack[++*top]=input;     } } void pop(int stack[], int* top){     if(is_empty(*top)){         printf("underflow\n");         exit(0);     }     else *top-=1; } void print_stack(int stack[],int top){     if(is_empty(top)) {         printf("empty\n");         exit(0);     }     else {         while(!is_empty(top)){             printf("%d\n",stack[top--]);         }     } }   // 이 아래로 수정 금지    int main() {      int stack[MAX_SIZE];     int top = 0;     int n;     int input;      scanf("%d", &n);      while (1) {         scanf("%d", &input);          if (input == 0) {             print_stack(stack, top);             break;          }         else if (input == -1) {             pop(stack, &top);         }         else if (input > 0){             push(stack, &top, n, input);         }     }      return 0; }
+
+User: DS202501525
+  - 2026-03-17 13:10:10 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:58:18 / 문제 B
+    data: 
+  - 2026-03-17 13:58:28 / 문제 B
+    data: 
+
+User: DS202501527
+  - 2026-03-17 13:10:13 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:14:03 / 문제 A
+    data: underflow
+    additional: #include <stdio.h>
+  - 2026-03-17 13:32:03 / 문제 B
+    data: 
+  - 2026-03-17 13:59:50 / 문제 D
+    data: fgets
+    additional: #include <stdio.h>  int stack[100]; int top = -1;  int isEmpty() {     return (top == -1); }  void push(int n) {     stack[++top] = n; }  int pop() {     return stack[top--]; }  int main() {     char command[100];     scanf("%s", &command);          int i = 0;     while (i < 101) {         char ch = command[i++];         if (ch >= '0' && ch <= '9') {             printf("%d push", ch - '0');             push(ch - '0');         } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {             int op2 = pop();             int op1 = pop();             int result = 0;                          printf("%d %d", op1, op2);                          switch (ch) {                 case '+' : result = op1 + op2; break;                 case '-' : result = op1 - op2; break;                 case '*' : result = op1 * op2; break;                 case '/' : result = op1 / op2; break;             }             printf("answer %d", result);             push(result);         }     }          printf("%d", pop()); }
+  - 2026-03-17 14:00:24 / 문제 D
+    data: fgets(expr, sizeof(expr), stdin);
+    additional: #include <stdio.h>  int stack[100]; int top = -1;  int isEmpty() {     return (top == -1); }  void push(int n) {     stack[++top] = n; }  int pop() {     return stack[top--]; }  int main() {     char command[100];     fgets("%s", &command);          int i = 0;     while (i < 101) {         char ch = command[i++];         if (ch >= '0' && ch <= '9') {             printf("%d push", ch - '0');             push(ch - '0');         } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {             int op2 = pop();             int op1 = pop();             int result = 0;                          printf("%d %d", op1, op2);                          switch (ch) {                 case '+' : result = op1 + op2; break;                 case '-' : result = op1 - op2; break;                 case '*' : result = op1 * op2; break;                 case '/' : result = op1 / op2; break;             }             printf("answer %d", result);             push(result);         }     }          printf("%d", pop()); }
+
+User: DS202501528
+  - 2026-03-17 13:10:11 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:14:01 / 문제 A
+    data: overflow
+    additional: #include <stdio.h>
+  - 2026-03-17 13:15:17 / 문제 A
+    data: underflow
+    additional: #include <stdio.h>
+  - 2026-03-17 13:18:55 / 문제 A
+    data: empty
+    additional: #include <stdio.h>
+  - 2026-03-17 13:36:04 / 문제 B
+    data: int check_vps(char expr[])
+
+User: DS202501529
+  - 2026-03-17 13:10:23 / 문제 A
+    data: #include <stdio.h>
+  - 2026-03-17 13:31:13 / 문제 B
+    data: 
+
+User: SC202200867
+  - 2026-02-06 10:11:44 / 문제 D
+    data: #include <stdio.h>
+  - 2026-02-06 10:12:27 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 10:18:02 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 10:22:40 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 10:45:29 / 문제 D
+    data: #include <stdio.h>
+  - 2026-02-06 10:56:00 / 문제 D
+    data: #include <stdio.h>
+  - 2026-02-06 11:38:19 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 11:43:57 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 12:11:53 / 문제 I
+    data: #include <stdio.h>
+  - 2026-02-06 12:43:16 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 12:45:38 / 문제 D
+    data: #include <stdio.h>
+
+User: SC202301642
+  - 2026-02-06 10:25:36 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 10:28:29 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 10:31:34 / 문제 G
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 10:35:15 / 문제 K
+    data: #define _CRT_SECURE_NO_WARNINGS
+
+User: SC202501506
+  - 2026-02-06 10:19:56 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 10:32:27 / 문제 E
+    data: #include <stdio.h>
+
+User: SC202501509
+  - 2026-02-06 10:41:20 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 11:04:03 / 문제 D
+    data: #include <stdio.h>
+  - 2026-02-06 13:10:05 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+
+User: SC202501512
+  - 2026-02-06 10:16:06 / 문제 D
+    data: #include <stdio.h>
+  - 2026-02-06 10:17:27 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 10:49:48 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+
+User: SC202501513
+  - 2026-02-06 11:33:09 / 문제 D
+    data: #include <stdio.h>
+  - 2026-02-06 11:34:54 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 12:02:49 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+
+User: SC202501520
+  - 2026-02-06 11:11:58 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 11:13:38 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 11:59:59 / 문제 D
+    data: #include <stdio.h>
+
+User: SC202501521
+  - 2026-02-06 11:00:45 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+  - 2026-02-06 11:17:24 / 문제 E
+    data: #include <stdio.h>
+
+User: SC202501529
+  - 2026-02-06 11:32:13 / 문제 E
+    data: #include <stdio.h>
+  - 2026-02-06 12:05:56 / 문제 D
+    data: #include <stdio.h>
+  - 2026-02-06 12:19:53 / 문제 M
+    data: #define _CRT_SECURE_NO_WARNINGS
+
