@@ -11,6 +11,7 @@ import io
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
+import subprocess
 import tempfile
 
 import pandas as pd
@@ -128,6 +129,60 @@ def generate_tcs(problem_title, problem_desc, solution_code, api_key):
         )
     )
     return json.loads(response.text)
+
+# --- 핵심 로직 3: AI 기반 출제 의도 및 구현 로직 정밀 검사 ---
+def analyze_code_intent_with_ai(student_code, template_code, intent_description, api_key):
+    client = genai.Client(api_key=api_key)
+    prompt = f"""
+    당신은 대학교 C언어 프로그래밍 전문 조교입니다.
+    학생이 제출한 코드가 원본 템플릿을 바탕으로 '출제 의도 및 세부 조건'을 정확히 구현했는지 정밀 평가해주세요.
+
+    [🚨 집중 평가 기준]
+    1. 자료구조 꼼수 검사: 진짜로 요구한 자료구조(예: 포인터를 이용한 연결 리스트 등)를 사용했는가? (배열 인덱스를 쓰거나 전역 변수로 우회하지 않았는지 꼼꼼히 확인)
+    2. 함수 껍데기(빈 깡통) 검사: 원본 템플릿에서 구현하라고 비워둔 함수 내부에 실제 동작하는 로직이 작성되었는가? (단순히 `return 0;`만 적어두거나, 테스트케이스 정답만 하드코딩 해둔 것은 아닌지 확인)
+
+    [출제 의도 및 세부 조건]
+    {intent_description}
+
+    [원본 템플릿 코드 (학생이 채워야 했던 뼈대)]
+    {template_code}
+
+    [학생 최종 제출 코드 (평가 대상)]
+    {student_code}
+    """
+    
+    intent_schema = types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "is_valid": types.Schema(type=types.Type.BOOLEAN, description="의도대로 완벽하게 구현했으면 true, 꼼수를 썼거나 껍데기만 있으면 false"),
+            "reason": types.Schema(type=types.Type.STRING, description="위반했을 경우 어떤 함수의 어떤 부분이 어떻게 문제인지 구체적인 이유 설명 (통과면 '정상 구현됨' 작성)")
+        },
+        required=["is_valid", "reason"]
+    )
+
+    max_retries = 5  # 🌟 수정: 넉넉하게 최대 5번까지 재시도
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=intent_schema,
+                    temperature=0.1
+                )
+            )
+            return json.loads(response.text)
+            
+        except Exception as e:
+            error_msg = str(e)
+            # 429 에러(속도 제한)인 경우
+            if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                if attempt < max_retries - 1:
+                    time.sleep(30) # 🌟 수정: 1분 제한이 확실히 풀리도록 30초 대기!
+                    continue
+            
+            return {"is_valid": False, "reason": f"AI 분석 중 오류 발생: {e}"}
 
 # --- 파일 자동 저장 로직 ---
 def save_files_to_local(title, formatted_problem, template_code, solution_code, test_cases):
@@ -542,55 +597,187 @@ with tab_diff:
                         else:
                             st.info(f"총 {fault_count}명의 규정 위반 학생을 적발했습니다. (컴파일 에러 및 시간 초과 제출건은 제외됨)")
 
-    st.divider()
-    # 🌟 새롭게 추가된 기능: 의심스러운 붙여넣기 탐지 🌟
-    st.header("🕵️‍♂️ 붙여넣기(Paste) 부정행위 탐지기")
-    st.markdown("에디터 활동 로그(CSV)를 업로드하여, 비정상적으로 긴 코드를 복사하여 붙여넣은 내역을 탐지합니다.")
-    
-    action_csv = st.file_uploader("📂 행동 로그 파일 업로드 (CSV)", type=["csv"], help="user_id, action, data, additional_data 열이 포함된 CSV 파일을 올려주세요.")
-    
-    if action_csv:
-        try:
-            df_action = pd.read_csv(action_csv, dtype=str)
-            if not {'user_id', 'action', 'data', 'additional_data'}.issubset(df_action.columns):
-                st.error("❌ CSV 파일에 필수 열(user_id, action, data, additional_data)이 모두 포함되어 있지 않습니다.")
-            else:
-                # '붙여넣기' 동작만 필터링
-                paste_df = df_action[df_action['action'].str.contains('붙여넣기', na=False)].copy()
-                
-                suspicious_records = []
-                for _, row in paste_df.iterrows():
-                    pasted_text = str(row['data']) if pd.notna(row['data']) else ""
-                    
-                    # 단순 #include 나 불필요한 공백 제거 후 순수 코드 길이 측정
-                    clean_text = re.sub(r'#include\s*[<"].*?[>"]', '', pasted_text).strip()
-                    
-                    # 짧은 단어(is_empty 등)는 무시하고 의미 있는 길이(40자 이상)의 블록을 붙여넣었을 때만 의심 처리
-                    if len(clean_text) >= 40: 
-                        suspicious_records.append(row)
-                        
-                if not suspicious_records:
-                    st.success("✅ 비정상적인 붙여넣기(부정행위 의심) 내역이 발견되지 않았습니다!")
-                else:
-                    st.warning(f"⚠️ 총 {len(suspicious_records)}건의 의심스러운 긴 코드 붙여넣기가 적발되었습니다!")
-                    
-                    for idx, row in enumerate(suspicious_records, 1):
-                        uid = row.get('user_id', '알수없음')
-                        pid = row.get('problem_id', '알수없음')
-                        time_val = row.get('timestamp', '시간없음')
-                        data_val = str(row.get('data', ''))
-                        add_data_val = str(row.get('additional_data', ''))
-                        
-                        with st.expander(f"🚨 [{uid}] - 문제 {pid} (시간: {time_val})"):
-                            st.markdown("**📌 실제로 붙여넣은 내용 (`data`)**")
-                            st.code(data_val, language="c")
-                            
-                            st.markdown("**📝 당시 전체 코드 상태 (`additional_data`)**")
-                            st.code(add_data_val, language="c")
-                            
-        except Exception as e:
-            st.error(f"CSV 파일을 읽거나 분석하는 중 오류가 발생했습니다: {e}")
+        # ==========================================
+        # 🌟 추가 기능: 헤더 파일 사용 제한 검사 🌟
+        # ==========================================   
+        st.divider()
+        st.markdown("### 🗂️ 4단계: 허용된 헤더 파일 외 사용 금지 검사")
+        st.info("특정 문제에서 지정된 헤더 파일(예: stdio.h) 외에 꼼수로 다른 헤더 파일(string.h, stdlib.h 등)을 사용했는지 1초 만에 스캔합니다.")
 
+        if student_codes:
+            # 1. 존재하는 문제 번호 추출
+            unique_probs_header = sorted(list(set(prob_num for user_id, prob_num in student_codes.keys())))
+                
+            # 2. 문제 선택 드롭다운 (AI 검사 드롭다운과 겹치지 않게 고유 key 부여)
+            target_prob_header = st.selectbox("🎯 헤더 파일을 검사할 문제 번호를 선택하세요", options=unique_probs_header, key="header_prob_select")
+                
+            # 3. 허용 헤더 파일 입력창
+            allowed_headers_input = st.text_input("✅ 허용할 헤더 파일을 입력하세요 (쉼표로 구분)", placeholder="예: stdio.h, stdbool.h")
+                
+            if st.button("🔍 헤더 파일 제한 검사 실행", type="secondary"):
+                if not allowed_headers_input.strip():
+                    st.warning("👆 허용할 헤더 파일을 하나 이상 입력해주세요. (예: stdio.h)")
+                else:
+                    import re  # 정규표현식 사용을 위한 모듈 (코드 최상단에 없어도 여기서 동작하도록 추가)
+                        
+                    # 사용자가 입력한 헤더 파일 목록을 리스트로 변환 (공백 제거)
+                    allowed_headers = [h.strip() for h in allowed_headers_input.split(',')]
+                    header_faults = []
+                        
+                    with st.spinner(f"{target_prob_header}번 문제의 헤더 파일 사용 내역을 스캔 중입니다..."):
+                        for (user_id, prob_num), codes in student_codes.items():
+                            # 선택한 문제가 아니면 패스
+                            if str(prob_num) != str(target_prob_header):
+                                continue
+                            
+                            # 마지막 유효 제출본(컴파일 에러 제외) 찾기
+                            valid_code = None
+                            for sub_data in reversed(codes):
+                                result_status = sub_data["result"].lower()
+                                if "compile error" not in result_status and "compiler error" not in result_status and "시간제한" not in result_status:
+                                    valid_code = sub_data["code"]
+                                    break
+                                
+                            if valid_code:
+                                # 정규표현식으로 코드 내의 모든 #include <...> 또는 #include "..." 추출
+                                # 추출 결과 예시: ['stdio.h', 'stdlib.h']
+                                found_headers = re.findall(r'#include\s*[<"]([^>"]+)[>"]', valid_code)
+                                    
+                                # 허용된 리스트에 없는 헤더 파일만 골라내기
+                                unauthorized = [h for h in found_headers if h not in allowed_headers]
+                                    
+                                if unauthorized:
+                                    header_faults.append({
+                                        "user_id": user_id,
+                                        "unauthorized_headers": unauthorized
+                                    })
+                                        
+                    # 결과 출력
+                    if not header_faults:
+                        st.success(f"🎉 완벽합니다! 모든 학생이 {target_prob_header}번 문제에서 지정된 헤더 파일만 사용했습니다.")
+                    else:
+                        st.error(f"🚨 총 {len(header_faults)}명의 학생이 허용되지 않은 헤더 파일을 사용했습니다!")
+                        for fault in header_faults:
+                            # 어떤 헤더를 몰래 썼는지 시각적으로 보여줌
+                            bad_headers_str = ", ".join([f"`{h}`" for h in fault['unauthorized_headers']])
+                            st.write(f"- ⚠️ **{fault['user_id']}** 학생: {bad_headers_str} 사용 적발")
+
+
+        # ==========================================
+        # 🌟 새로 추가된 기능: AI 출제 의도 정밀 검사 🌟
+        # ==========================================
+        st.divider()
+        st.markdown("### 🧠 5단계: AI 기반 출제 의도 및 구현 로직 정밀 검사 (선택사항)")
+        st.info("단순히 함수 이름만 있는지 검사하는 것을 넘어, 연결 리스트 사용 여부, 함수 내부 로직 구현 여부 등을 AI가 직접 코드를 읽고 판단합니다.")
+
+        # 1️⃣ 학생 제출 데이터에서 '존재하는 문제 번호'만 중복 없이 뽑아서 오름차순 정렬
+        if student_codes:
+            unique_probs = sorted(list(set(prob_num for user_id, prob_num in student_codes.keys())))
+            
+            # 2️⃣ 문제 선택 드롭다운 (첨부해주신 이미지와 같은 형태)
+            target_prob_num = st.selectbox("🎯 분석할 문제 번호를 선택하세요", options=unique_probs)
+            
+            # 출제 의도 입력창
+            intent_desc = st.text_area("검사할 출제 의도 및 세부 조건을 상세히 적어주세요.", 
+                                       placeholder="예: 1. 배열 대신 반드시 포인터를 이용한 연결 리스트(Linked List)로 큐를 구현할 것.\n2. push 함수 내부에 malloc을 이용한 동적 할당 로직이 있어야 함.")
+            
+            if st.button("🤖 AI 출제 의도 정밀 검사 실행", type="primary"):
+                if not api_key:
+                    st.error("👈 왼쪽 사이드바에 API Key를 먼저 입력해주세요!")
+                elif not template_code_input.strip():
+                    st.warning("👆 2단계에서 원본 템플릿 코드를 먼저 입력해야 AI가 껍데기 함수를 판별할 수 있습니다!")
+                elif not intent_desc.strip():
+                    st.warning("👆 출제 의도 및 세부 조건을 입력해주세요.")
+                else:
+                    with st.spinner(f"AI가 {target_prob_num}번 문제 코드를 정밀 검사 중입니다... (API 제한 방지로 시간이 소요됩니다)"):
+                        ai_faults = []
+                        
+                        for (user_id, prob_num), codes in student_codes.items():
+                            # 3️⃣ 핵심 필터링: 선택한 문제(target_prob_num)가 아니면 분석하지 않고 패스!
+                            if str(prob_num) != str(target_prob_num):
+                                continue
+                            
+                            # 학생의 '가장 마지막 유효 제출본(컴파일 에러 제외)' 찾기
+                            valid_code = None
+                            for sub_data in reversed(codes):
+                                result_status = sub_data["result"].lower()
+                                if "compile error" not in result_status and "compiler error" not in result_status and "시간제한" not in result_status:
+                                    valid_code = sub_data["code"]
+                                    break
+                            
+                            if valid_code:
+                                # AI 분석 함수 호출
+                                analysis_result = analyze_code_intent_with_ai(valid_code, template_code_input, intent_desc, api_key)
+                                
+                                if not analysis_result.get("is_valid", True):
+                                    ai_faults.append({
+                                        "user_id": user_id,
+                                        "reason": analysis_result.get("reason", "상세 이유 없음")
+                                    })
+                                
+                                # 구글 API 제한(1분당 15회) 방지를 위해 6초 대기
+                                time.sleep(6) 
+                                
+                        if not ai_faults:
+                            st.success(f"🎉 모든 학생이 {target_prob_num}번 문제의 출제 의도에 맞게 코드를 구현했습니다!")
+                        else:
+                            st.error(f"🚨 총 {len(ai_faults)}명의 학생이 {target_prob_num}번 문제의 출제 의도를 위반한 것으로 의심됩니다.")
+                            for fault in ai_faults:
+                                with st.expander(f"⚠️ {fault['user_id']} 학생 - 의도 위반 의심 상세 내용"):
+                                    st.write(fault["reason"])
+        else:
+            st.warning("학생 코드 데이터가 아직 로드되지 않았습니다. 이전 단계를 먼저 진행해주세요.")
+
+        st.divider()
+        # 🌟 새롭게 추가된 기능: 의심스러운 붙여넣기 탐지 🌟
+        st.header("🕵️‍♂️ 붙여넣기(Paste) 부정행위 탐지기")
+        st.markdown("에디터 활동 로그(CSV)를 업로드하여, 비정상적으로 긴 코드를 복사하여 붙여넣은 내역을 탐지합니다.")
+        
+        action_csv = st.file_uploader("📂 행동 로그 파일 업로드 (CSV)", type=["csv"], help="user_id, action, data, additional_data 열이 포함된 CSV 파일을 올려주세요.")
+        
+        if action_csv:
+            try:
+                df_action = pd.read_csv(action_csv, dtype=str)
+                if not {'user_id', 'action', 'data', 'additional_data'}.issubset(df_action.columns):
+                    st.error("❌ CSV 파일에 필수 열(user_id, action, data, additional_data)이 모두 포함되어 있지 않습니다.")
+                else:
+                    # '붙여넣기' 동작만 필터링
+                    paste_df = df_action[df_action['action'].str.contains('붙여넣기', na=False)].copy()
+                    
+                    suspicious_records = []
+                    for _, row in paste_df.iterrows():
+                        pasted_text = str(row['data']) if pd.notna(row['data']) else ""
+                        
+                        # 단순 #include 나 불필요한 공백 제거 후 순수 코드 길이 측정
+                        clean_text = re.sub(r'#include\s*[<"].*?[>"]', '', pasted_text).strip()
+                        
+                        # 짧은 단어(is_empty 등)는 무시하고 의미 있는 길이(40자 이상)의 블록을 붙여넣었을 때만 의심 처리
+                        if len(clean_text) >= 40: 
+                            suspicious_records.append(row)
+                            
+                    if not suspicious_records:
+                        st.success("✅ 비정상적인 붙여넣기(부정행위 의심) 내역이 발견되지 않았습니다!")
+                    else:
+                        st.warning(f"⚠️ 총 {len(suspicious_records)}건의 의심스러운 긴 코드 붙여넣기가 적발되었습니다!")
+                        
+                        for idx, row in enumerate(suspicious_records, 1):
+                            uid = row.get('user_id', '알수없음')
+                            pid = row.get('problem_id', '알수없음')
+                            time_val = row.get('timestamp', '시간없음')
+                            data_val = str(row.get('data', ''))
+                            add_data_val = str(row.get('additional_data', ''))
+                            
+                            with st.expander(f"🚨 [{uid}] - 문제 {pid} (시간: {time_val})"):
+                                st.markdown("**📌 실제로 붙여넣은 내용 (`data`)**")
+                                st.code(data_val, language="c")
+                                
+                                st.markdown("**📝 당시 전체 코드 상태 (`additional_data`)**")
+                                st.code(add_data_val, language="c")
+                                
+            except Exception as e:
+                st.error(f"CSV 파일을 읽거나 분석하는 중 오류가 발생했습니다: {e}")
+
+   
 
 # ==========================================
 # 탭 4: 학생 관리 시스템 (영구 저장 / CSV 연동)
